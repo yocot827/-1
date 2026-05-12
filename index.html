@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 이벤트 주사위</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎲 학교 이벤트 주사위</h1>
+
+    <div class="input-box">
+        <input type="text" id="studentId" placeholder="학번 입력">
+        <input type="text" id="studentName" placeholder="이름 입력">
+    </div>
+
+    <div class="dice-section">
+        <div class="dice-box">
+            <h3>1차</h3>
+            <div class="dice" id="dice1">-</div>
+            <button onclick="rollDice(1)">굴리기</button>
+        </div>
+
+        <div class="dice-box">
+            <h3>2차</h3>
+            <div class="dice" id="dice2">-</div>
+            <button onclick="rollDice(2)">굴리기</button>
+        </div>
+
+        <div class="dice-box">
+            <h3>3차</h3>
+            <div class="dice" id="dice3">-</div>
+            <button onclick="rollDice(3)">굴리기</button>
+        </div>
+    </div>
+
+    <div class="total-box">
+        합계: <span id="total">0</span>
+    </div>
+
+    <button class="save-btn" onclick="saveResult()">결과 저장</button>
+
+    <h2>저장된 학생 기록</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>학번</th>
+                <th>이름</th>
+                <th>1차</th>
+                <th>2차</th>
+                <th>3차</th>
+                <th>합계</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
